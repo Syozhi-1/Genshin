@@ -1,0 +1,40 @@
+body {
+	text-align: center;
+}
+
+#log_t {
+	margin: auto;
+}
+
+.zhi {
+	background-color: rgba(160, 32, 240, 0.2);
+}
+
+.jin {
+	background-color: rgba(255, 215, 0, 0.2);
+	font-weight: 700;
+}
+
+#r4_log {
+	/*display: inline-block;*/
+	width: 200px;
+}
+
+#log {
+	/*display: inline-block;*/
+	width: 600px;
+}
+
+#r5_log {
+	/*display: inline-block;*/
+	width: 200px;
+}
+
+#container {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: flex-start;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>原神抽卡模拟</title>
+		<link rel="stylesheet" href="css/app.css" />
+	</head>
+
+	<body>
+		<div id="app">
+			<input type="button" name="normal" value="常驻池" />
+			<input type="button" name="limit" value="限定池" /><br />
+			<input type="button" name="single" @click="single" value="单抽" />
+			<input type="button" name="ten" @click="ten" value="十连" />
+			<div id="detail">
+				抽奖次数：{{count}} &nbsp; 原石花费：{{count*160}}<br /> 出货率：
+				<span><div>3★ -> {{s3_count / count *100}}%</div>
+					  		  <div>4★ -> {{s4_count / count *100}}%</div>
+					  		  <div>5★ -> {{s5_count / count *100}}%</div></span> 保底次数：4★ -> {{s4_baodi}} 次 &nbsp; 5★ -> {{s5_baodi}} 次<br /> 距离大保底还有：{{da_baodi}} 发<br />
+				<span>5★(0.6%)：{{s5_count}} 个</span><br />
+				<span>4★(5.1%)：{{s4_count}} 个 </span><br />
+				<span>3★(94.3%)：{{s3_count}} 个 </span><br />
+			</div>
+
+			<div id="load">
+
+			</div>
+
+		</div>
+
+		<script type="text/javascript" src="js/vue.js"></script>
+		<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+
+				$("input[name=normal]").on('click', function() {
+					$("#load").load("常驻池.html");
+				})
+
+				$("input[name=limit]").on('click', function() {
+					$("#load").load("限定池.html");
+				})
+
+			})
+		</script>
+
+	</body>
+
+</html>
